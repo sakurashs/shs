@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## 啊~这是属于shs的家园
 
 You can use the [editor on GitHub](https://github.com/sakurashs/shs/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
