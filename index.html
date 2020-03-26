@@ -1,12 +1,11 @@
 第一次瞎搞的网站，啥东西也没有
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>shs</title>
-</head>
-<body>   
-<h1>标题</h1>最多有6个，依次递减
+<html>  
+        <head>    
+            <title>语义化</title> 
+	<base target="_blank" /> 
+         </head>
+<body>  
+	<h1>标题</h1>最多有6个，依次递减
 	<p>段落1</p>
 	<hr />水平线：单标记
 	<p>段落2</p>
@@ -32,12 +31,65 @@
 	<p>b,i,s,u只有使用没有强调的意思</p>
      	<p>strong，em，del，ins语意更强烈</p>
 	<hr />
-	<h3>标签属性</h3>
+	<h3 id="biaoqianshuxing">标签属性</h3><a href="#fanhuidibu">返回底部</a><br />
 	<hr width="666"  />水平线宽度为666
 	<hr color="red"  />水平线颜色为红色
 	<hr width="666"  color="red"  />水平线宽度为666，颜色为红色
 	<p>1.标签可以拥有多个属性，必须写在开始标签中，位于标签名后面</p>
-	<p>2.属性之间不分先后顺，标签名与属性、属性与属性之间均以空格隔开</p>
+	<p>2.属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格隔开</p>
 	<p>3.任何标签的属性都有默认值，省略该属性则取默认值</p>
+	<h4>基本图像插入方式</h4>图像的路径
+	<img />图像标签<img src="1.png"/>
+	<h4>带有alt的图像</h4>图像不能显示时的替换文本
+	<img src="2.png" alt="wo"/>
+	<h4>带有title的图像</h4>鼠标悬停时显示的内容
+	<img src="1.png"  title="一个美少女" />
+	<h4>带有宽度的图像</h4>会等比缩放
+	<img src="1.png"  title="一个美少女"  width="400"  /><br/>
+	<img src="1.png"  title="一个美少女"  height="200"  /><br/>
+	<h4>带有边框的图像</h4>设置图像边框的宽度
+	<img src="1.png"  title="一个美少女"  border="15"  /><br/>
+	<hr />
+	<h5 id="lianjiebiaoqian">链接标签</h5>
+	<a href="http://www.baidu.com">baidu</a>href="跳转目标"<br />
+	<a href="http://www.sina.com">sina</a><br />
+	<a href="基本结构.html">基本结构</a>本地链接，需在同一根目录下<br />
+	<a href="#">暂时还没有链接，所以用#代替</a><br />
+	<a href="1.png">一张图片</a>图片<br />
+	<a href="http://www.baidu.com" target="_self">baidu</a>target="目标窗口的弹出方式"_self:默认值<br />
+	<a href="http://www.baidu.com" target="_blank">baidu</a>target="目标窗口的弹出方式"_blank:在新窗口中打开方式<br />
+	<h6>锚点定位</h6>
+	<a href="#lianjiebiaoqian">链接标签</a><br />
+	<a href="#biaoqianshuxing" id="fanhuidibu">标签属性</a><br />
+	<h1>base标签</h1>
+	放在head之间 做全局变量
+	<h1>特殊字符标签</h1>
+	&nbsp&nbsp&nbsp空格符&ampnbsp<br />
+	&lt小于号&amplt<br />
+	&gt大于号&ampgt<br />
+	&amp&号&ampamp<br />
+	&yen人民币&ampyen<br />
+	&copy版权号&ampcopy<br />
+	&reg注册商标号&ampreg<br />
+	&deg度数&ampdeg<br />
+	&plusmn正负号&ampplusmn<br />
+	&times乘号&amptimes<br />
+	&divide除号&ampdivide<br />
+	&sup2二次方&ampsup2<br />
+	&sup3三次方&ampsup3<br />
+	<h1>注释标签</h1>便于阅读又不在浏览器中显示<br />
+	<!--关于注释有几点说明-->	
+	1.多谢注释标签是非常好的写代码习惯，团队协作更顺畅。<br />
+	2.注释是写给队友看的，浏览器是不执行的。<br />	
+	<h1>相对路径</h1>
+	<p>1.图像文件和html文件处于同一文件夹，只需输入图像文件的名称即可，如&ltimg src="1.jpg" /&gt</p>
+	<img src="白.jpg" />
+	<p>2.图像文件位于html文件的下一级文件夹，输入文件夹名和文件名，之间用“/”隔开，如&ltimg src="img\img01\logo.gif" /&gt</p>
+	<img src="C:\Users\shs\Pictures\proxy.png" />
+	<p>3.图像文件位于html文件的上一级文件夹，在文件名之前加入“../”，如果是上两级，则需要使用“../../”,以此类推，如&ltimg src="../logo.gif" /&gt</p>
+	<img src="../唯美.jpg" />
+	<h1>绝对路径</h1>一般不用
+	<img src="C:\Users\shs\Pictures\proxy.png"  height="200" /><br />
+	<img src="http://www.itcast.cn/2018czgw/images/logo.png"  weight="500" />
 </body>
 </html>
