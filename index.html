@@ -1,95 +1,829 @@
-第一次瞎搞的网站，啥东西也没有
-<html>  
-        <head>    
-            <title>语义化</title> 
-	<base target="_blank" /> 
-         </head>
-<body>  
-	<h1>标题</h1>最多有6个，依次递减
-	<p>段落1</p>
-	<hr />水平线：单标记
-	<p>段落2</p>
-	<br />换行标签<br />
-	1.<br />
-	2.<br />
-	3.<br />
-	4.<br />
-	div标签的使用
-	<div>用来布局</div>
-	span标签的使用
-	<span>用来布局</span>
-	<h2>文本格式化标签</h2>
-	<p><b>加粗</b></p>
-	<p><strong>加粗</strong></p>
-	<p><i>倾斜</i></p>
-	<p><em>倾斜</em></p>
-	<p><s>删除线</s></p>
-	<p><del>删除线</del></p>
-	<p><u>下划线</u></p>
-	<p><ins>下划线</ins></p>
-	<hr />
-	<p>b,i,s,u只有使用没有强调的意思</p>
-     	<p>strong，em，del，ins语意更强烈</p>
-	<hr />
-	<h3 id="biaoqianshuxing">标签属性</h3><a href="#fanhuidibu">返回底部</a><br />
-	<hr width="666"  />水平线宽度为666
-	<hr color="red"  />水平线颜色为红色
-	<hr width="666"  color="red"  />水平线宽度为666，颜色为红色
-	<p>1.标签可以拥有多个属性，必须写在开始标签中，位于标签名后面</p>
-	<p>2.属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格隔开</p>
-	<p>3.任何标签的属性都有默认值，省略该属性则取默认值</p>
-	<h4>基本图像插入方式</h4>图像的路径
-	<img />图像标签<img src="1.png"/>
-	<h4>带有alt的图像</h4>图像不能显示时的替换文本
-	<img src="2.png" alt="wo"/>
-	<h4>带有title的图像</h4>鼠标悬停时显示的内容
-	<img src="1.png"  title="一个美少女" />
-	<h4>带有宽度的图像</h4>会等比缩放
-	<img src="1.png"  title="一个美少女"  width="400"  /><br/>
-	<img src="1.png"  title="一个美少女"  height="200"  /><br/>
-	<h4>带有边框的图像</h4>设置图像边框的宽度
-	<img src="1.png"  title="一个美少女"  border="15"  /><br/>
-	<hr />
-	<h5 id="lianjiebiaoqian">链接标签</h5>
-	<a href="http://www.baidu.com">baidu</a>href="跳转目标"<br />
-	<a href="http://www.sina.com">sina</a><br />
-	<a href="基本结构.html">基本结构</a>本地链接，需在同一根目录下<br />
-	<a href="#">暂时还没有链接，所以用#代替</a><br />
-	<a href="1.png">一张图片</a>图片<br />
-	<a href="http://www.baidu.com" target="_self">baidu</a>target="目标窗口的弹出方式"_self:默认值<br />
-	<a href="http://www.baidu.com" target="_blank">baidu</a>target="目标窗口的弹出方式"_blank:在新窗口中打开方式<br />
-	<h6>锚点定位</h6>
-	<a href="#lianjiebiaoqian">链接标签</a><br />
-	<a href="#biaoqianshuxing" id="fanhuidibu">标签属性</a><br />
-	<h1>base标签</h1>
-	放在head之间 做全局变量
-	<h1>特殊字符标签</h1>
-	&nbsp&nbsp&nbsp空格符&ampnbsp<br />
-	&lt小于号&amplt<br />
-	&gt大于号&ampgt<br />
-	&amp&号&ampamp<br />
-	&yen人民币&ampyen<br />
-	&copy版权号&ampcopy<br />
-	&reg注册商标号&ampreg<br />
-	&deg度数&ampdeg<br />
-	&plusmn正负号&ampplusmn<br />
-	&times乘号&amptimes<br />
-	&divide除号&ampdivide<br />
-	&sup2二次方&ampsup2<br />
-	&sup3三次方&ampsup3<br />
-	<h1>注释标签</h1>便于阅读又不在浏览器中显示<br />
-	<!--关于注释有几点说明-->	
-	1.多谢注释标签是非常好的写代码习惯，团队协作更顺畅。<br />
-	2.注释是写给队友看的，浏览器是不执行的。<br />	
-	<h1>相对路径</h1>
-	<p>1.图像文件和html文件处于同一文件夹，只需输入图像文件的名称即可，如&ltimg src="1.jpg" /&gt</p>
-	<img src="白.jpg" />
-	<p>2.图像文件位于html文件的下一级文件夹，输入文件夹名和文件名，之间用“/”隔开，如&ltimg src="img\img01\logo.gif" /&gt</p>
-	<img src="C:\Users\shs\Pictures\proxy.png" />
-	<p>3.图像文件位于html文件的上一级文件夹，在文件名之前加入“../”，如果是上两级，则需要使用“../../”,以此类推，如&ltimg src="../logo.gif" /&gt</p>
-	<img src="../唯美.jpg" />
-	<h1>绝对路径</h1>一般不用
-	<img src="C:\Users\shs\Pictures\proxy.png"  height="200" /><br />
-	<img src="http://www.itcast.cn/2018czgw/images/logo.png"  weight="500" />
+<html>
+<head><!--ctrl+/快速生成注释-->
+    <title>语义化</title>
+    <base target="_blank" />
+</head>
+<body bgcolor="#ff8">
+<audio id="yeyan" src="泠鸢yousa - 夜宴风波【泠鸢·翻唱】（Cover：音阙诗听）.mp3"  controls="controls"> </audio>泠鸢yousa - 夜宴风波【泠鸢·翻唱】（Cover：音阙诗听）.mp3<br />
+<audio id="nature" src="MITSUO - 自然の息吹 (ナコルル).flac"  controls="controls"> </audio>MITSUO - 自然の息吹 (ナコルル).flac<br />
+<audio id="gaobaiqiqiu"src="周杰伦 - 告白气球.mp3" controls="controls"> </audio>周杰伦 - 告白气球.mp3<br />
+<video autoplay controls muted>
+    <source src="CLANNAD - 1.在那落樱缤纷的坡道上(Av29801945,P1).mp4" style="margin: 4px;"/>
+</video>
+<h1>标题</h1>最多有6个，依次递减
+<p>段落1</p>
+<hr />水平线：单标记
+<p>段落2</p>
+<br />换行标签<br />
+1.<br />
+2.<br />
+3.<br />
+4.<br />
+div标签的使用
+<div>用来布局</div>
+span标签的使用
+<span>用来布局</span>
+<h2>文本格式化标签</h2>
+<p><b>加粗</b></p>
+<p><strong>加粗</strong></p>
+<p><i>倾斜</i></p>
+<p><em>倾斜</em></p>
+<p><s>删除线</s></p>
+<p><del>删除线</del></p>
+<p><u>下划线</u></p>
+<p><ins>下划线</ins></p>
+<hr />
+<p>b,i,s,u只有使用没有强调的意思</p>
+<p>strong，em，del，ins语意更强烈</p>
+<hr />
+<h3 id="biaoqianshuxing">标签属性</h3><a href="#fanhuidibu">返回底部</a><br />
+<hr width="666"  />水平线宽度为666
+<hr color="red"  />水平线颜色为红色
+<hr width="666"  color="red"  />水平线宽度为666，颜色为红色
+<p>1.标签可以拥有多个属性，必须写在开始标签中，位于标签名后面</p>
+<p>2.属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格隔开</p>
+<p>3.任何标签的属性都有默认值，省略该属性则取默认值</p>
+<h4>基本图像插入方式</h4>图像的路径
+<img />图像标签<img src="1.png"/>
+<h4>带有alt的图像</h4>图像不能显示时的替换文本
+<img src="2.png" alt="wo"/>
+<h4>带有title的图像</h4>鼠标悬停时显示的内容
+<img src="1.png"  title="一个美少女" />
+<h4>带有宽度的图像</h4>会等比缩放
+<img src="1.png"  title="一个美少女"  width="400"  /><br/>
+<img src="1.png"  title="一个美少女"  height="200"  /><br/>
+<h4>带有边框的图像</h4>设置图像边框的宽度
+<img src="1.png"  title="一个美少女"  border="15"  /><br/>
+<hr />
+<h5 id="lianjiebiaoqian">链接标签</h5>
+<a href="http://www.baidu.com">baidu</a>href="跳转目标"<br />
+<a href="http://www.sina.com">sina</a><br />
+<a href="基本结构.html">基本结构</a>本地链接，需在同一根目录下<br />
+<a href="#">暂时还没有链接，所以用#代替</a><br />
+<a href="1.png">一张图片</a>图片<br />
+<a href="http://www.baidu.com" target="_self">baidu</a>target="目标窗口的弹出方式"_self:默认值<br />
+<a href="http://www.baidu.com" target="_blank">baidu</a>target="目标窗口的弹出方式"_blank:在新窗口中打开方式<br />
+<h6>锚点定位</h6>
+<a href="#lianjiebiaoqian">链接标签</a><br />
+<a href="#biaoqianshuxing" id="fanhuidibu">标签属性</a><br />
+<h1>base标签</h1>
+放在head之间 做全局变量
+<h1>特殊字符标签</h1>
+&nbsp&nbsp&nbsp空格符&ampnbsp<br />
+&lt小于号&amplt<br />
+&gt大于号&ampgt<br />
+&amp&号&ampamp<br />
+&yen人民币&ampyen<br />
+&copy版权号&ampcopy<br />
+&reg注册商标号&ampreg<br />
+&deg度数&ampdeg<br />
+&plusmn正负号&ampplusmn<br />
+&times乘号&amptimes<br />
+&divide除号&ampdivide<br />
+&sup2二次方&ampsup2<br />
+&sup3三次方&ampsup3<br />
+<h1>注释标签</h1>便于阅读又不在浏览器中显示<br />
+<!--关于注释有几点说明-->
+1.多谢注释标签是非常好的写代码习惯，团队协作更顺畅。<br />
+2.注释是写给队友看的，浏览器是不执行的。<br />
+<h1>相对路径</h1>
+<p>1.图像文件和html文件处于同一文件夹，只需输入图像文件的名称即可，如&ltimg src="1.jpg" /&gt</p>
+<img src="白.jpg" />
+<p>2.图像文件位于html文件的下一级文件夹，输入文件夹名和文件名，之间用“/”隔开，如&ltimg src="img\img01\logo.gif" /&gt</p>
+<img src="C:\Users\shs\Pictures\proxy.png" />
+<p>3.图像文件位于html文件的上一级文件夹，在文件名之前加入“../”，如果是上两级，则需要使用“../../”,以此类推，如&ltimg src="../logo.gif" /&gt</p>
+<img src="../唯美.jpg" />
+<h1>绝对路径</h1>一般不用
+<img src="C:\Users\shs\Pictures\proxy.png"  height="200" /><br />
+<img src="http://www.itcast.cn/2018czgw/images/logo.png"  weight="500" />
+<h1>列表标签</h1>整齐整洁有序<br />
+<h2>无序列表ul</h2>无序列表的各个列表之间没有顺序级别之分，是并列的，其基本语法格式：
+<h3>我喜欢的水果</h3>
+<ul>
+    <li><a href="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1585205341&di=4fd6d26d252a720c88a118f31e7d4e23&src=http://pic.haixia51.com/pic/?p=/qianqianhua/20180502/15/1525247931-DLpoKUzmdG.jpg">apple</a></li>
+    <li><a href="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2524174760,3520769077&fm=26&gp=0.jpg">banana</a></li>
+</ul>
+<h2>有序列表ol</h2>排序
+<ol>
+    <li>America</li>
+    <li>China</li>
+</ol>
+<h2>自定义列表</h2>
+<dl>
+    <dt>名词</dt>
+    <dd>名词解释</dd>
+</dl>
+<dl>
+    <dt>天梯</dt>
+    <dd>联赛积分</dd>
+</dl>
+<h1>创建表格</h1>border 设置表格的边框<br />  cellspacing 设置单元格与单元格边框之间的空白间距<br /> cellpadding 设置单元格内容与单元格边框之间的空白间距 <br />align 设置表格在网页中的水平对齐方式 常用left center right<br />
+    <table width="500"height="200"border="1"cellspacing="0"cellpadding="10"align="center">
+        <tr>
+            <td>
+            姓名
+            </td>
+            <td>
+            性别
+            </td>
+            <td>
+            年龄
+            </td>
+        </tr>
+        <tr>
+            <td>
+                shs
+            </td>
+            <td>
+                boy
+            </td>
+            <td>
+                26
+            </td>
+        </tr>
+    </table>
+    <h1>表头标签</h1>将td改成th
+<table width="500"height="200"border="1"cellspacing="0"cellpadding="10"align="center">
+    <tr>
+        <th>
+          姓名
+        </th>
+        <th>
+          性别
+        </th>
+        <th>
+          年龄
+        </th>
+    </tr>
+    <tr>
+        <td>
+            shs
+        </td>
+        <td>
+            boy
+        </td>
+        <td>
+            26
+        </td>
+    </tr>
+</table>
+<h1>thead&tbody</h1>
+<table width="500" height="300" border="2" align="center" bgcolor="purple">
+    <thead>
+    <tr>
+        <td>
+            动漫
+        </td>
+        <td>
+            主角
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            年龄
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+           <img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=524024877,1009470333&fm=58&bpow=512&bpoh=768" width="50"/>
+            <a href="https://baike.baidu.com/item/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85/8702?fr=aladdin">&lt&lt火影忍者&gt&gt</a>
+        </td>
+        <td>
+           <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2381214030,98818375&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E6%BC%A9%E6%B6%A1%E9%B8%A3%E4%BA%BA/322717?fr=aladdin">漩涡鸣人</a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            19
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=1804077310,3270329304&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=cd4ffd53af746dcd94bb95802310ea70" width="50" />
+           <a href="https://baike.baidu.com/item/%E6%AD%BB%E7%A5%9E/5460?fr=aladdin">&lt&lt死神&gt&gt</a>
+        </td>
+        <td>
+            <img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1379967814,1829645647&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%BB%91%E5%B4%8E%E4%B8%80%E6%8A%A4/815967?fr=aladdin">
+            黑崎一护
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            17
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss2.bdstatic.com/6Ot1bjeh1BF3odCf/it/u=3139734161,2125237196&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=a140388422cc0d077f394ac24c017e4c" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%93%B6%E9%AD%82/27263">&lt&lt银魂&gt&gt</a>
+            
+        </td>
+        <td>
+            <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2950408541,685161686&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E5%9D%82%E7%94%B0%E9%93%B6%E6%97%B6/1124635?fr=aladdin">
+            坂田银时
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            27
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3920626529,1194933900&fm=179&app=42&f=JPG?w=121&h=140&s=84A52EBE489549EF480D9CEB0300706B" width="50" />
+            <a href="https://baike.baidu.com/item/%E8%88%AA%E6%B5%B7%E7%8E%8B/75861?fromtitle=%E6%B5%B7%E8%B4%BC%E7%8E%8B&fromid=8904">
+            &lt&lt海贼王&gt&gt
+            </a>
+        </td>
+        <td>
+            <img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=644759035,2276306474&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E8%92%99%E5%A5%87%C2%B7D%C2%B7%E8%B7%AF%E9%A3%9E/726966">
+            蒙奇·D·路飞
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            18
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=814662892,1418359419&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=37e42a8a40ddc29d019fd429bb25cfd6" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E5%B0%8F%E5%9C%86/20175601">&lt&lt魔法少女小圆&gt&gt</a>
+        </td>
+        <td>
+            <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=228379519,221057163&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%B9%BF%E7%9B%AE%E5%9C%86">
+            鹿目圆
+            </a>   
+        </td>
+        <td>
+            女
+        </td>
+        <td>
+            14
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h2>表格标题table里的caption</h2>
+<table width="500" height="300" border="2" align="center" bgcolor="purple">
+   <caption>一些动漫简介</caption>
+    <thead>
+    <tr>
+        <td>
+            动漫
+        </td>
+        <td>
+            主角
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            年龄
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <img src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=524024877,1009470333&fm=58&bpow=512&bpoh=768" width="50"/>
+            <a href="https://baike.baidu.com/item/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85/8702?fr=aladdin">&lt&lt火影忍者&gt&gt</a>
+        </td>
+        <td>
+            <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2381214030,98818375&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E6%BC%A9%E6%B6%A1%E9%B8%A3%E4%BA%BA/322717?fr=aladdin">漩涡鸣人</a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            19
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=1804077310,3270329304&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=cd4ffd53af746dcd94bb95802310ea70" width="50" />
+            <a href="https://baike.baidu.com/item/%E6%AD%BB%E7%A5%9E/5460?fr=aladdin">&lt&lt死神&gt&gt</a>
+        </td>
+        <td>
+            <img src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1379967814,1829645647&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%BB%91%E5%B4%8E%E4%B8%80%E6%8A%A4/815967?fr=aladdin">
+                黑崎一护
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            17
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss2.bdstatic.com/6Ot1bjeh1BF3odCf/it/u=3139734161,2125237196&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=a140388422cc0d077f394ac24c017e4c" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%93%B6%E9%AD%82/27263">&lt&lt银魂&gt&gt</a>
+
+        </td>
+        <td>
+            <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2950408541,685161686&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E5%9D%82%E7%94%B0%E9%93%B6%E6%97%B6/1124635?fr=aladdin">
+                坂田银时
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            27
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3920626529,1194933900&fm=179&app=42&f=JPG?w=121&h=140&s=84A52EBE489549EF480D9CEB0300706B" width="50" />
+            <a href="https://baike.baidu.com/item/%E8%88%AA%E6%B5%B7%E7%8E%8B/75861?fromtitle=%E6%B5%B7%E8%B4%BC%E7%8E%8B&fromid=8904">
+                &lt&lt海贼王&gt&gt
+            </a>
+        </td>
+        <td>
+            <img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=644759035,2276306474&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E8%92%99%E5%A5%87%C2%B7D%C2%B7%E8%B7%AF%E9%A3%9E/726966">
+                蒙奇·D·路飞
+            </a>
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            18
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=814662892,1418359419&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=37e42a8a40ddc29d019fd429bb25cfd6" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%AD%94%E6%B3%95%E5%B0%91%E5%A5%B3%E5%B0%8F%E5%9C%86/20175601">&lt&lt魔法少女小圆&gt&gt</a>
+        </td>
+        <td>
+            <img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=228379519,221057163&fm=26&gp=0.jpg" width="50" />
+            <a href="https://baike.baidu.com/item/%E9%B9%BF%E7%9B%AE%E5%9C%86">
+                鹿目圆
+            </a>
+        </td>
+        <td>
+            女
+        </td>
+        <td>
+            14
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h1>合并单元格</h1>将多余部分删除 删除的个数=合并的个数-1<br />
+合并的顺序先上后下，先左后右<br />
+<p>跨行合并rowspan</p>
+<table width="500"height="200"border="1"cellspacing="0"cellpadding="10"align="center">
+    <tr>
+        <td>
+            姓名
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            年龄
+        </td>
+    </tr>
+    <tr>
+        <td>
+            shs
+        </td>
+        <td>
+            boy
+        </td>
+        <td rowspan="2">
+            26
+        </td>
+    </tr>
+    <tr>
+        <td>
+            hsh
+        </td>
+        <td>
+            girl
+        </td>
+    </tr>
+</table>
+<p>跨列合并colspan</p>
+<table width="500"height="200"border="1"cellspacing="0"cellpadding="10"align="center">
+    <tr>
+        <td>
+            姓名
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            年龄
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            shs
+        </td>
+        <td rowspan="2">
+            26
+        </td>
+    </tr>
+    <tr>
+        <td>
+            hsh
+        </td>
+        <td>
+            girl
+        </td>
+    </tr>
+</table>
+<table width="500"height="200"border="1"cellspacing="0"cellpadding="10"align="center">
+    <tr>
+        <td>
+            姓名
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            年龄
+        </td>
+    </tr>
+    <tr>
+        <td>
+            shs
+        </td>
+        <td>
+            boy
+        </td>
+        <td rowspan="2">
+            26
+        </td>
+    </tr>
+    <tr>
+        <td>
+            hsh
+        </td>
+        <td colspan="2">
+            girl
+        </td>
+    </tr>
+</table>
+    <hr  color="blue"/>
+<h1>表单标签</h1>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp目的是为了收集用户信息</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在html中，一个完整的表单通常由表单控件（也称为表单元素），提示信息和表单域3个部分构成。</p>
+<h2>表单控件</h2>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp包含了具体的表单功能项，如单行文本输入框、密码输入框、复选框、提交按钮、重置按钮等。</p>
+<h2>提示信息</h2>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp一个表单中通常还包含一些说明性的文字，提示用户进行填写和操作。</p>
+<h2>表单域</h2>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp相当于一个容器，用来容纳所有的表单控件和提示信息，可以通过它定义处理表单数据所用程序的
+    url地址，以及数据提交到服务器的方法。 如果不定义表单域，表单中的数据就无法传送到后台服务器。</p>
+<h3>表单控件</h3>
+<h4>input控件</h4>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在上面的语法中，&ltinput /&gt标签为单标签，type属性为最基本的属性，其取值有多种，用于指定不同的控件类型。除了type属性之外，&ltinput /&gt标签还可以定义很多其他的属性，其常用属性有：</p>
+<table width="800" bgcolor="#7fffd4" height="800" border="3" align="center">
+    <thead>
+    <tr>
+        <td>
+            属性
+        </td>
+        <td>
+            属性值
+        </td>
+        <td>
+            描述
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="9">
+            type
+        </td>
+        <td>
+            text
+        </td>
+        <td>
+            单行文本输入框
+        </td>
+    </tr>
+    <tr>
+        <td>
+            password
+        </td>
+        <td>
+            密码输入框
+        </td>
+    </tr>
+    <tr>
+        <td>
+            radio
+        </td>
+        <td>
+            单选按钮
+        </td>
+    </tr>
+    <tr>
+        <td>
+            checkbox
+        </td>
+        <td>
+            复选框
+        </td>
+    </tr>
+    <tr>
+        <td>
+            button
+        </td>
+        <td>
+            普通按钮
+        </td>
+    </tr>
+    <tr>
+        <td>
+            submit
+        </td>
+        <td>
+            提交按钮
+        </td>
+    </tr>
+    <tr>
+        <td>
+            reset
+        </td>
+        <td>
+            重置按钮
+        </td>
+    </tr>
+    <tr>
+        <td>
+            image
+        </td>
+        <td>
+            图像形式的提交按钮
+        </td>
+    </tr>
+    <tr>
+        <td>
+            file
+        </td>
+        <td>
+            文件域
+        </td>
+    </tr>
+    <tr>
+        <td >
+            name
+        </td>
+        <td>
+            由用户自定义
+        </td>
+        <td>
+            控件的名称
+        </td>
+    </tr>
+    <tr>
+        <td >
+            value
+        </td>
+        <td>
+            由用户自定义
+        </td>
+        <td>
+            input控件中的默认文本值
+        </td>
+    </tr>
+    <tr>
+        <td >
+            size
+        </td>
+        <td>
+            正整数
+        </td>
+        <td>
+            input控件在页面中的显示
+        </td>
+    </tr>
+    <tr>
+        <td >
+            checked
+        </td>
+        <td>
+            checked
+        </td>
+        <td>
+            定义选择控件默认被选中的项
+        </td>
+    </tr>
+    <tr>
+        <td >
+            maxlength
+        </td>
+        <td>
+            正整数
+        </td>
+        <td>
+            控件允许输入的最多字符数
+        </td>
+    </tr>
+    </tbody>
+</table>
+用户名：<input type="text" /><!--这是一个文本框--><br />
+用户名：<input type="text" value="username" /><!--这是一个文本框 value:input控件中的默认文本值--><br />
+密　码：<input type="password" /><!--密码框--><!--ctrl+/快速生成注释--><br />
+password:<input type="password" maxlength="6"  size="50"/><!--密码框maxlength表示输入最大字符 size表示input控件在页面的显示--><br />
+性　别：<input type="radio" name="sex" /> <!--单选按钮-->boy
+        <input type="radio" name="sex" /> girl<!--name用来表示同一组下，只能单选-->
+        <input type="radio" name="sex" checked /> 保密
+<!--checked用来表示默认选择-->
+<br />
+        <!--单选框，如果是一组，我们通过相同的name值来实现-->
+爱　好：<input type="checkbox" />唱 <input type="checkbox" />跳 <input type="checkbox" />rap
+        <input type="checkbox" />篮球 <input type="checkbox" />鸡你太美
+<!--复选框，可以同时选择多个-->
+<audio src="http://music.163.com/song/media/outer/url?id=463850570.mp3" controls="controls"></audio><br />
+<audio src="泠鸢yousa - 夜宴风波【泠鸢·翻唱】（Cover：音阙诗听）.mp3" autoplay="true" > </audio><br />
+音　乐：<input type="radio" name="music" /><a href="#yeyan">夜宴风波</a>
+<input type="radio"  name="music" /><a href="#nature">自然の息吹</a>
+<input type="radio"  name="music" /><a href="#gaobaiqiqiu">告白气球</a><br />
+搜索：<input type="button" value="搜索"/><br />
+<!--普通按钮-->
+<input type="submit"/><br />
+<!--提交按钮-->
+<input type="submit" value="提交表单"/><br />
+<!--提交按钮 value:input控件中的默认文本值-->
+<input type="reset" /><br />
+<!--重置按钮-->
+<input type="reset"  value="重置表单"/><br />
+<!--重置按钮 value:input控件中的默认文本值-->
+<input type="image" src="1.png" width="100" /><!--图像提交按钮--><br />
+上传头像：
+<input type="file" /><!--文件按钮 value:input控件中的默认文本值--><br />
+<h1>label标签</h1>
+<p>label标签为input元素定义标注</p>
+<p>作用：用于绑定一个标签元素，当点击label标签的时候，被绑定的表单元素就会获得输入焦点</p>
+<label>输入账号：<input type="text" /></label><br />
+<label for="2">输入账号：<input type="text" /></label><input type="text" id="2" /><br />
+1.用label直接进行包裹input就可以<br />
+2.如果label里面有多个表单，向定位某个  可以通过for id的格式来进行<br />
+<h1>textarea控件（文本域）</h1>
+<p>可轻松创建多行文本输入</p>
+<textarea>
+  请输入留言
+</textarea><br>
+<textarea cols="50" rows="20">
+  cols="每行中的字符数" rows="显示的行数"
+</textarea>
+<h1>下拉菜单标签select</h1>
+籍贯
+<select >
+    <option >美国</option>
+    <option value="">beijing</option>
+    <option selected>shanghai</option>
+<!--selected即为默认选中项-->
+</select>
+<h1>表单域</h1>
+<form action="url地址" method="提交方式" name="用户信息">
+    用户名：<input type="text" /><!--这是一个文本框--><br />
+    用户名：<input type="text" value="username" /><!--这是一个文本框 value:input控件中的默认文本值--><br />
+    密　码：<input type="password" /><!--密码框--><!--ctrl+/快速生成注释--><br />
+    password:<input type="password" maxlength="6"  size="50"/><!--密码框maxlength表示输入最大字符 size表示input控件在页面的显示--><br />
+    性　别：<input type="radio" name="sex" /> <!--单选按钮-->boy
+    <input type="radio" name="sex" /> girl<!--name用来表示同一组下，只能单选-->
+    <input type="radio" name="sex" checked /> 保密
+    <!--checked用来表示默认选择-->
+    <br />
+    <!--单选框，如果是一组，我们通过相同的name值来实现-->
+    爱　好：<input type="checkbox" />唱 <input type="checkbox" />跳 <input type="checkbox" />rap
+    <input type="checkbox" />篮球 <input type="checkbox" />鸡你太美
+    <!--复选框，可以同时选择多个-->
+    <audio src="http://music.163.com/song/media/outer/url?id=463850570.mp3" controls="controls" ></audio><br />
+    <audio  muted src="泠鸢yousa - 夜宴风波【泠鸢·翻唱】（Cover：音阙诗听）.mp3" autoplay > </audio><br />
+    音　乐：<input type="radio" name="music" /><a href="#yeyan">夜宴风波</a>
+    <input type="radio"  name="music" /><a href="#nature">自然の息吹</a>
+    <input type="radio"  name="music" /><a href="#gaobaiqiqiu">告白气球</a><br />
+    搜索：<input type="button" value="搜索"/><br />
+    <!--普通按钮-->
+    <input type="submit"/><br />
+    <!--提交按钮-->
+    <input type="submit" value="提交表单"/><br />
+    <!--提交按钮 value:input控件中的默认文本值-->
+    <input type="reset" /><br />
+    <!--重置按钮-->
+    <input type="reset"  value="重置表单"/><br />
+    <!--重置按钮 value:input控件中的默认文本值-->
+    <input type="image" src="1.png" width="100" /><!--图像提交按钮--><br />
+    上传头像：
+    <input type="file" /><!--文件按钮 value:input控件中的默认文本值--><br />
+    <h1>label标签</h1>
+    <p>label标签为input元素定义标注</p>
+    <p>作用：用于绑定一个标签元素，当点击label标签的时候，被绑定的表单元素就会获得输入焦点</p>
+    <label>输入账号：<input type="text" /></label><br />
+    <label for="2">输入账号：<input type="text" /></label><input type="text" id="2" /><br />
+    1.用label直接进行包裹input就可以<br />
+    2.如果label里面有多个表单，向定位某个  可以通过for id的格式来进行<br />
+    <h1>textarea控件（文本域）</h1>
+    <p>可轻松创建多行文本输入</p>
+    <textarea>
+  请输入留言
+</textarea><br>
+    <textarea cols="50" rows="20">
+  cols="每行中的字符数" rows="显示的行数"
+</textarea>
+    <h1>下拉菜单标签select</h1>
+    籍贯
+    <select >
+        <option >美国</option>
+        <option value="">beijing</option>
+        <option selected>shanghai</option>
+        <!--selected即为默认选中项-->
+    </select>
+</form>
+<h1>常用新标签</h1>
+<header>语义：定义页面的头部  页眉</header>
+<nav>语义：定义导航栏</nav>
+<footer>语义：定义 页面底部，页脚</footer>
+<article>语义：定义文章</article>
+<section>语义：定义区域</section>
+<aside>语义：定义其所处内容之外的内容</aside>
+<input type="text" value="输入明星" list="star" /><!--   搜索栏  input里用list-->
+<datalist id="star"> <!--datalist里面用id来实现和input联系-->
+    <option >周杰伦</option>
+    <option >成龙</option>
+    <option >刘德华</option>
+    <option >李白</option>
+    <option >李黑</option>
+    <option >李蓝</option>
+    <option >李黄</option>
+    <option >李绿</option>
+</datalist><br><br><br><br>
+<fieldset >
+    <legend>用户登录legend</legend><!--标题-->
+    fieldset元素可将表单内的相关元素分组打包，  legend搭配使用<br><br>
+    用户名：<input type="text" /><br>
+    密　码：<input type="password" /><br>
+</fieldset>
+<h1>新增input表单</h1>
+<form action="#">
+    邮箱：<input type="email"  /><br><!--邮箱-->
+    手机：<input type="tel" /><br><!--手机-->
+    数字：<input type="number" /><br><!--只能输入数字-->
+    网址：<input type="url" /><br><!--网址-->
+    搜索：<input type="search" /><br><!--搜索-->
+    区域：<input type="range" /><br><!--滑块区域-->
+    时间：<input type="time" /><br><!--时间 小时 分钟-->
+    年月日：<input type="date" /><br><!--时间 年月日-->
+    年月：<input type="month" /><br><!--时间 年月-->
+    星期：<input type="week" /><br><!--星期-->
+    年月日具体时间：<input type="datetime-local" /><br><!--年月日，具体时间-->
+    颜色：<input type="color" /><br><!--颜色-->
+<h2>常用新属性</h2><br>
+    用户名：<input type="text" placeholder="用户名" /><br><!--占位符 当用户输入时，里面文字消失，删除用户输入的所有文字，自动还原-->
+    百度一下：<input type="text"  autofocus /><br><!--自动获得输入焦点-->
+    文件上传：<input type="file" /><br><!--上传文件-->
+    多文件上传：<input type="file"  multiple /><br><!--上传多个文件-->
+<h3>自动记录完成</h3>
+    1.autocomplete 首先需要提交按钮<br>
+    2.autocomplete 其次需要命名name<br>
+    3.autocomplete on和off命令<br>
+    <form action="">
+        <label>姓名： <input type="text" autocomplete="off" name="username" /></label><br>
+        性别： <input type="radio" required name="sex" />男<!--required  必填项,内容不可为空-->
+            <input type="radio" required name="sex" />女<br>
+        <label>爱好： <input type="text" autocomplete="off"  accesskey="s" /></label><br><!--accesskey:用户使用alt+s自动填充焦点-->
+        <input type="submit" />
+    </form>
+    <input type="submit" />
+</form>
+<h1>多媒体标签</h1>
+<embed src="http://music.163.com/song?id=36271326&userid=1496155892" /><br>
+<audio  controls>ogg mp3 wav
+    <source src="http://music.163.com/song?id=36271326&userid=1496155892" />
+</audio>
+<video autoplay controls muted>mp4 ogg webM
+    <source src="CLANNAD - 1.在那落樱缤纷的坡道上(Av29801945,P1).mp4" style="margin: 4px;"/>
+</video>
 </body>
 </html>
